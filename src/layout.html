@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <header class="header-container">
+        <img id="menu-icon" src="./assets/menu.svg">
+        <h1 class="header-title">Todo List</h1>
+    </header>
+    <div class="side-menu">
+        <p>Menu</p>
+        <p>Menu</p>
+        <p>Menu</p>
+    </div>
+    <main class="main-content">
+        <div class="filter-container">
+            <div class="filter-top-section">
+                <select id="time-filter">
+                    <option value="today">Today</option>
+                    <option value="week">Week</option>
+                    <option value="all">All</option>
+                </select>
+                <select id="project-list">
+                    <option value="0">Home</option>
+                </select>
+            </div>
+            <div class="filter-bottom-section">
+                <button id="show-form-btn" class="active">New Task</button>
+                <button id="show-project-form-btn" class="active">New Project</button>
+            </div>
+        </div>
+
+            <form id="add-task-form">
+                <div class="user-input-container">
+                    <div class="top-section">
+                        <input type="text" id="task" placeholder="Write Task..." autofocus required>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="bottom-section">
+                        <input type="text" id="description" placeholder="Add description...">
+                        <select id="priority" required>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                    <div class="button-section">
+                        <button type="submit" id="add-todo-btn">Add task</button>
+                        <button type="button" id="cancel-add-btn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+            <form id="add-project-form">
+                <div class="user-project-input-container">
+                    <input type="text" id="project" placeholder="Project Title..." autofocus required>
+
+                    <div class="project-button-section">
+                        <button type="submit" id="add-project-btn">Add Project</button>
+                        <button type="button" id="cancel-add-project-btn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        <div class="todo-section"></div>
+    </main>
+    <footer class="footer-container">
+        <span>Copyright Justin Hairston</span>
+    </footer>
+</body>
+
+</html>
