@@ -38,8 +38,8 @@ module.exports = {
 
         new HtmlWebpackPlugin({
         title: 'Todo List',
-        filename: 'layout.html',
-        template: './src/layout.html'
+        filename: 'index.html',
+        template: './src/index.html'
     
         }),
     
