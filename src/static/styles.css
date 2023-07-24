@@ -9,12 +9,11 @@
 :root {
     --bg-color: #f9fafb;
     --header-bg-color: #d1d5db;
-    --header-text-color: black;
-    --side-nav-bg-color: #f3f4f6;
     --footer-bg-color: #d1d5db;
     --footer-text-color: black;
     --todo-card-bg-color: lightgray;
-    --task-form-bg-color: rgba(0, 0, 0, 0.1);;
+    --task-form-bg-color: rgba(0, 0, 0, 0.1);
+    ;
 }
 
 html {
@@ -42,19 +41,27 @@ body {
     grid-area: 1 / 1 / 2 / -1;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
 }
 
-#menu-icon {
+.left-header-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#menu-icon,
+#light {
     height: 3rem;
 }
 
-.main-content.full {
-    grid-area: 2 / 1 / 2 / -1;
+#light.dark {
+    filter: invert(100%) sepia(75%) saturate(3%) hue-rotate(222deg) brightness(101%) contrast(101%);
 }
 
 .main-content {
-    grid-area: 2 / 2 / 2 / -1;
+    grid-area: 2 / 1 / 2 / -1;
     display: grid;
     grid-template-rows: auto auto 1fr;
     overflow: scroll;
@@ -255,7 +262,7 @@ body {
 #time-filter:hover,
 #project-list:hover {
     cursor: pointer;
-} 
+}
 
 .filter-top-section {
     display: flex;
@@ -271,21 +278,6 @@ body {
 }
 
 /* End of Form section */
-
-.side-menu {
-    display: block;
-    padding: 2rem;
-    background-color: var(--side-nav-bg-color);
-    grid-area: 2 / 1 / 2 / 2;
-    transition: ease-in-out 1s;
-
-}
-
-.side-menu.hide {
-    display: none;
-
-
-}
 
 
 .footer-container {
@@ -309,8 +301,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 100%; 
-    
+    width: 100%;
+
 }
 
 .todo-card {
@@ -319,7 +311,7 @@ body {
     padding: 1rem;
     gap: 1.5rem;
     align-items: center;
-   
+
     background-color: var(--todo-card-bg-color);
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -330,11 +322,14 @@ body {
 .todo-title,
 .todo-date {
     font-size: clamp(0.2rem, 0.8469rem + 0.6803vw, 1.25rem);
-    
+
 }
 
 .todo-date {
     min-width: 10%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .todo-title {
@@ -366,14 +361,15 @@ body {
     width: clamp(20px, 15%, 32px);
 }
 
-.edit-button:hover, .delete-button:hover {
+.edit-button:hover,
+.delete-button:hover {
     cursor: pointer;
 }
 
 .details-button:hover {
     background-color: rgba(0, 0, 0, .15);
     cursor: pointer;
-} 
+}
 
 .details-button {
     padding: 0.2rem;

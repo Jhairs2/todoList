@@ -1,5 +1,5 @@
 import './static/styles.css';
-import {todoLibrary, projectLibrary} from './todo.js';
+import { projectLibrary} from './todo.js';
 import { updateDisplay} from './display.js';
 import { pageInteractivity} from './events';
 

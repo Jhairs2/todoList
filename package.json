@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --open",
-    "upload": "git subtree push --prefix dist origin gh-pages" 
+    "upload": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",

@@ -1,8 +1,7 @@
 import { updateDisplay, getCard } from "./display";
 import { collapsibleContent } from "./todoCard";
 import { sendAddFormData, sendEditFormData, sendProjectFormData } from "./form";
-
-
+import { add } from "date-fns";
 
 
 const taskStatus = (card) => {
@@ -88,6 +87,14 @@ const cancelProjectFormEvent = () => {
 
 }
 
+const themeSwitch = () => {
+    const bulbIcon = document.querySelector("#light");
+
+    bulbIcon.addEventListener("click" ,() => {
+        bulbIcon.classList.toggle("dark");
+    })
+}
+
 const submitEditFormEvent = (library, id) => {
     const form = document.querySelector(`[data-form-id="${id}"]`);
     form.addEventListener("submit", (e) => {
@@ -165,6 +172,7 @@ const pageInteractivity = (library) => {
     cancelProjectFormEvent();
     timeFilterEvent(library);
     projectView(library);
+    themeSwitch();
 }
 
 const projectView = (library) => {
