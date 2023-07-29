@@ -89,9 +89,14 @@ const cancelProjectFormEvent = () => {
 
 const themeSwitch = () => {
     const bulbIcon = document.querySelector("#light");
+    const elements = document.querySelectorAll("body *");
+    const body = document.querySelector("body");
 
-    bulbIcon.addEventListener("click" ,() => {
-        bulbIcon.classList.toggle("dark");
+    bulbIcon.addEventListener("click", () => {
+        elements.forEach(element => {
+            element.classList.toggle("dark");
+        })
+        body.classList.toggle("dark");
     })
 }
 
