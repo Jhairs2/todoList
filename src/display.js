@@ -53,8 +53,8 @@ const updateDisplay = (library) => {
 const changeBorderColor = (todo, id) => {
     const card = getCard(id);
     if (todo.priority == "Low") {
-        card.style.borderLeft = " 15px thick solid green";
-        card.style.borderRight = "15px thick solid green";
+        card.style.borderLeft = " 15px solid green";
+        card.style.borderRight = "15px solid green";
     }
     else if (todo.priority == "Medium") {
         card.style.borderLeft = "15px solid yellow";
