@@ -55,7 +55,7 @@ body.dark {
 }
 
 .header-container.dark {
-    background-color:var(--header-bg-color-dark);
+    background-color: var(--header-bg-color-dark);
     color: var(--header-text-color-dark);
 }
 
@@ -65,8 +65,25 @@ body.dark {
     gap: 2rem;
 }
 
-#light {
-    height: 3rem;
+.right-header-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#light,
+#linkedin-logo,
+#github-logo {
+    height: 2.5rem;
+    transition: 0.5s ease-in-out;
+}
+
+#light:hover,
+#linkedin-logo:hover,
+#github-logo:hover {
+    cursor: pointer;
+    filter: invert(100%) sepia(75%) saturate(3%) hue-rotate(222deg) brightness(101%) contrast(101%);
 }
 
 #light.dark {
@@ -272,7 +289,8 @@ body.dark {
     font-weight: bold;
 }
 
-#time-filter.dark, #project-list.dark {
+#time-filter.dark,
+#project-list.dark {
     color: white;
     background-color: rgba(130, 130, 130, 0.5);
 }
@@ -307,6 +325,7 @@ body.dark {
     color: var(--footer-text-color);
     grid-area: 3 / 1 / -1 / -1;
 }
+
 .footer-container.dark {
     background-color: var(--footer-bg-color-dark);
     color: var(--footer-text-color-dark);
@@ -389,10 +408,12 @@ body.dark {
 .edit-button,
 .delete-button {
     width: clamp(20px, 15%, 32px);
+    transition: 0.5s ease-in-out;
 }
 
 .edit-button:hover,
 .delete-button:hover {
+    filter: invert(100%) sepia(75%) saturate(3%) hue-rotate(222deg) brightness(101%) contrast(101%);
     cursor: pointer;
 }
 
@@ -495,4 +516,3 @@ body.dark {
     font-size: 1.5rem;
     font-weight: bold;
 }
-

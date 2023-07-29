@@ -43,7 +43,7 @@ const sendEditFormData = (form, library, id) => {
     const formElements = form.elements;
     const newTask = formElements.newTask.value;
     const newDescription = formElements.newDescription.value
-    const newDate = formElements.newDate.value
+    const newDate = formElements.newDate.value;
     const newPriority = formElements.newPriority.value
 
     library.edit(id, "title", newTask);

@@ -5,13 +5,12 @@ import { pageInteractivity} from './events';
 
 
 const todo = projectLibrary()
-const name = document.getElementById("project-list");
+const currentDate = new Date().toJSON().slice(0, 10);;
 todo.add();
-console.log(todo.getProject(0))
 pageInteractivity(todo);
 
 
-todo.getProject(0).add("Wash Dishes", "Need soap", "2023-07-08", "Medium");
+todo.getProject(0).add("Wash Dishes", "Need soap", currentDate, "Medium");
 updateDisplay(todo.getProject(0));
 
 
